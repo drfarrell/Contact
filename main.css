@@ -3,20 +3,14 @@ html, body {
     overflow-x: hidden;
 }
 
-body {
-background: rgba(255,255,255,1);
-background: -moz-linear-gradient(110deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(230,230,230,1) 47%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 69%, rgba(255,255,255,1) 100%);
-background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(255,255,255,1)), color-stop(47%, rgba(238,238,238,1)), color-stop(61%, rgba(255,255,255,1)), color-stop(69%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
-background: -webkit-linear-gradient(110deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(238,238,238,1) 47%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 69%, rgba(255,255,255,1) 100%);
-background: -o-linear-gradient(110deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(238,238,238,1) 47%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 69%, rgba(255,255,255,1) 100%);
-background: -ms-linear-gradient(110deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(238,238,238,1) 47%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 69%, rgba(255,255,255,1) 100%);
-background: linear-gradient(110deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(244,244,244,1) 47%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
-}
-
 * {
     margin: 0;
     padding: 0;
+}
+
+.hover {
+-webkit-user-select: none;
+-webkit-touch-callout: none;        
 }
 
 /*------------------------------------------Fonts---*/
@@ -25,6 +19,17 @@ body {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-weight: regular; 
   color: #515357;
+  
+   /*-Gradient-*/
+  background: rgba(255,255,255,1);
+  background: -moz-linear-gradient(110deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(230,230,230,1) 47%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 69%, rgba(255,255,255,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(255,255,255,1)), color-stop(47%, rgba(238,238,238,1)), color-stop(61%, rgba(255,255,255,1)), color-stop(69%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+  background: -webkit-linear-gradient(110deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(238,238,238,1) 47%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 69%, rgba(255,255,255,1) 100%);
+  background: -o-linear-gradient(110deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(238,238,238,1) 47%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 69%, rgba(255,255,255,1) 100%);
+  background: -ms-linear-gradient(110deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(238,238,238,1) 47%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 69%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(110deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 65%, rgba(240,240,240,1) 65%, rgba(255,255,255,1) 85%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+
 }
 
 h1 {
@@ -40,31 +45,41 @@ h2 {
 }
 
 h3 {
-  text-align: center;
-  font-weight: 400;
-  font-size: 1.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.1em;
 }
 
 h4 {
-  font-size: 1em;
+  font-size: 0.9em;
   color: #8B8B8B;
 }
 
 p {
   color: #8B8B8B;
   font-family: 'PT Serif', serif;
+  font-size: 1.2em;
 }
 
 a {
   text-decoration: none;
   color: #3B3B3B;
   -webkit-transition: color 0.5s;
+  transition: color 0.5s;
 }
 
-a:hover, a:focus {
-  text-decoration: none;
-  color: #FFB400; 
-   -webkit-transition: color 0.2s;
+a:hover {
+  text-decoration:none;
+  color: #FE8B00;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+a:hover_effect {
+  text-decoration:none;
+  color: #FE8B00;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
 /*------------------------------------------Navbar---*/
@@ -72,8 +87,13 @@ a:hover, a:focus {
 .navbar-default .navbar-nav > li > a {
   color: white; 
 }
+
 .navbar-default .navbar-nav > li > a:hover {
-  color: #FFB400; 
+  color: #FE8B00;
+}
+
+.navbar-default .navbar-nav > li > a:hover_effect {
+  color: #FE8B00;
 }
 
 .navbar {
@@ -83,17 +103,16 @@ a:hover, a:focus {
   position: fixed;
   z-index: 100;
   width: 100%;
-  padding-right: 9%;
-  padding-left:10%;
 }
 
-.navbar-brand
-{
-  position: absolute;
-  width: 100%;
-  left: 0;
-  text-align: center;
-  margin: auto;
+.navbar .container{
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+button {
+  position: relative;
+  top: 3px;
 }
 
 header ul {
@@ -106,6 +125,7 @@ header ul {
 
 header li {
   float: right;
+  display: inline;
 }
 
 #gone {
@@ -119,12 +139,17 @@ header li {
 }
 
 .descriptor {
-  padding-left: 5%;
-  padding-right: 20%;
+  padding-left: 0%;
+  padding-right: 32%;
   padding-top: 10%;
-  padding-bottom: 10%;
+  padding-bottom: 15%;
 }
 
+img {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 
 /*------------------------------------------Footer---*/
 footer {
@@ -133,14 +158,29 @@ footer {
   padding-bottom: 10px;
 }
 
-#social {
-  float: right;
+@media(max-width: 991px){
+  
+
+  .navbar .container {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
+}
+
+@media(max-width: 767px){
+
+  .navbar .container {
+    padding-right: 15px !important;
+    padding-left: 35px !important;
+  }
+
 }
 
 @media(max-width: 720px){
+ 
   h1 {
     font-weight: 700;
-    font-size: 3.8em;
+    font-size: 3.2em;
   }
 
   h2 {
@@ -149,31 +189,35 @@ footer {
     font-size: 1.7em;
   }
   
-  .navbar {
-    padding-right: 0%;
-    padding-left: 5%;
+  .navbar .container{
+    padding-right: 15px;
+    padding-left: 33px;
   }
   
-  
-  /*------------------------------------------Portfolio---*/
-  .portfolio {
+  .project .container{
     margin: 1%;
   }
   
   .jumbotron {
-    padding: 15% 0px 0px 0px;
-    background: none;
+    padding: 15% 0px 10% 0px;
   }
   
   .descriptor {
     padding-top: 10%;
-    padding-bottom: 10%;
+    padding-bottom: 20%;
+    padding-right: 12%;
   }
-
-  #social {
-    float: left;
-  }
-
   
 }
+
+@media(max-width: 662px){
+  
+  .descriptor {
+    padding-top: 10%;
+    padding-bottom: 20%;
+    padding-right: 10%;
+  }
+
+}
+
 
