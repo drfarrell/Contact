@@ -10,26 +10,36 @@ html, body {
 
 .hover {
 -webkit-user-select: none;
--webkit-touch-callout: none;        
+-webkit-touch-callout: none;
 }
 
 /*------------------------------------------Fonts---*/
 
-body {
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  font-weight: regular; 
-  color: #515357;
-  
-   /*-Gradient-*/
-  background: rgba(255,255,255,1);
-  background: -moz-linear-gradient(110deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(230,230,230,1) 47%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 69%, rgba(255,255,255,1) 100%);
-  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(255,255,255,1)), color-stop(47%, rgba(238,238,238,1)), color-stop(61%, rgba(255,255,255,1)), color-stop(69%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
-  background: -webkit-linear-gradient(110deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(238,238,238,1) 47%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 69%, rgba(255,255,255,1) 100%);
-  background: -o-linear-gradient(110deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(238,238,238,1) 47%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 69%, rgba(255,255,255,1) 100%);
-  background: -ms-linear-gradient(110deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(238,238,238,1) 47%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 69%, rgba(255,255,255,1) 100%);
-  background: linear-gradient(110deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 65%, rgba(240,240,240,1) 65%, rgba(255,255,255,1) 85%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+/** Bold */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 700;
+  src: url("https://sf.abarba.me/SF-UI-Display-Bold.otf");
+}
 
+/** Heavy */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 800;
+  src: url("https://sf.abarba.me/SF-UI-Display-Heavy.otf");
+}
+
+/** Regular */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 400;
+  src: url("https://sf.abarba.me/SF-UI-Display-Regular.otf");
+}
+
+body {
+  font-family: "SF Display", -apple-system, BlinkMacSystemFont, Arial, Helvetica, sans-serif;
+  color: #515357;
+  rgba(255,255,255,1);
 }
 
 h1 {
@@ -41,7 +51,7 @@ h2 {
   /*font-family: 'PT Serif', serif;*/
   font-weight: 300;
   line-height: 120%;
-  font-size: 2em;
+  font-size: 1.0em;
 }
 
 h3 {
@@ -57,8 +67,10 @@ h4 {
 
 p {
   color: #8B8B8B;
+  padding-top: 30px;
   font-family: 'PT Serif', serif;
-  font-size: 1.2em;
+  font-size: 1.3em !important;
+  line-height: 160%;
 }
 
 a {
@@ -85,7 +97,7 @@ a:hover_effect {
 /*------------------------------------------Navbar---*/
 
 .navbar-default .navbar-nav > li > a {
-  color: white; 
+  color: white;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
@@ -153,13 +165,13 @@ img {
 
 /*------------------------------------------Footer---*/
 footer {
-  background-color: none; 
+  background-color: none;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
 @media(max-width: 991px){
-  
+
 
   .navbar .container {
     padding-right: 0px !important;
@@ -177,7 +189,7 @@ footer {
 }
 
 @media(max-width: 720px){
- 
+
   h1 {
     font-weight: 700;
     font-size: 3.2em;
@@ -188,30 +200,30 @@ footer {
     line-height: 120%;
     font-size: 1.7em;
   }
-  
+
   .navbar .container{
     padding-right: 15px;
     padding-left: 33px;
   }
-  
+
   .project .container{
     margin: 1%;
   }
-  
+
   .jumbotron {
     padding: 15% 0px 10% 0px;
   }
-  
+
   .descriptor {
     padding-top: 10%;
     padding-bottom: 20%;
     padding-right: 12%;
   }
-  
+
 }
 
 @media(max-width: 662px){
-  
+
   .descriptor {
     padding-top: 10%;
     padding-bottom: 20%;
@@ -219,5 +231,3 @@ footer {
   }
 
 }
-
-
